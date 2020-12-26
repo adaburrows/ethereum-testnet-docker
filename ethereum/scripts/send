@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+
+SCRIPT="eth.sendTransaction({from: \"0x$2\", to: \"0x$3\", value: \"$4\"})"
+docker exec -ti "$1" geth attach /root/data/geth.ipc --exec "$SCRIPT"

@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+
+docker exec -ti "$1" geth attach /root/data/geth.ipc

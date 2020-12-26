@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+
+SCRIPT="eth.sendTransaction({from: \"0xacABb6Df0D0703467Ed7dc7A549D541dad48F937\", to: \"0x$1\", value: \"$2\"})"
+docker exec -ti "eth-faucet" geth attach /root/data/geth.ipc --exec "$SCRIPT"

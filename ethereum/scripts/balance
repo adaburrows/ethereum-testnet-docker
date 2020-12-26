@@ -1,0 +1,5 @@
+#!/bin/bash
+set -e
+
+SCRIPT="eth.getBalance(eth.accounts[0])"
+docker exec -ti "$1" geth attach /root/data/geth.ipc --exec "$SCRIPT"
