@@ -10,12 +10,15 @@ ease of development. DO NOT use any of this in production.
 
 Ethereum ports (useful for connecting extra-container apps) which can
 optionally be used to allow access to the geth process outside the containers:
+
+```
     ports:
      - "30303:30303"      # Ethereum P2P
      - "30303:30303/udp"  # Ethereum P2P UDP
      - "8545:8545"        # HTTP
      - "8546:8546"        # WS
      - "8547:8547"        # GraphQL
+```
 
 ## Ethereum Accounts
 
