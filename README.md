@@ -53,10 +53,10 @@ as you're not recreating the network after tearing it down.
 There are four basic scripts included for getting started sending Wei (the base
 unit of ethereum) between accounts:
 
- * ./ethereuem/scripts/balance $eth-node
- * ./ethereuem/scripts/drip $recieving-account $value
- * ./ethereuem/scripts/send $eth-node $sending-account $recieving-account $value
- * ./ethereuem/scripts/geth_console $eth-node
+ * ./ethereum/scripts/balance $eth-node
+ * ./ethereum/scripts/drip $recieving-account $value
+ * ./ethereum/scripts/send $eth-node $sending-account $recieving-account $value
+ * ./ethereum/scripts/geth_console $eth-node
 
 For example, let check the balance on eth-faucet:
 
