@@ -25,8 +25,11 @@
 #
 # Using the network:
 #
-# First things first, bring the network up:
-# # docker-compose -f docker-compose.ethereum.yml up
+# First things first, create the needed docker network:
+# # ./ethereum/scripts/create_docker_network
+#
+# Then bring the network up:
+# # docker-compose up
 #
 # When it first starts up, it will take a minute or so for all the nodes to peer.
 # After, they've peered the first time it will be faster the next time, as long
@@ -197,9 +200,7 @@ services:
       - ./ethereum/password:/root/password:ro
 
 networks:
-  # The network which we use for any node interacting with ethereum
+  # Use the externally created network for more flexibility
   ethereum:
-    ipam:
-      driver: default
-      config:
-        - subnet: "10.13.1.0/24"
+    external:
+      name: eth-test-net

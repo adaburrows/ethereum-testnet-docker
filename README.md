@@ -34,10 +34,16 @@ eth-cuauhtli: 0x65F5641480B861815E2C188F6097D519A8c48c98
 
 ## Usage
 
-First things first, bring the network up:
+First things first, create the needed docker network:
 
 ```
-# docker-compose -f docker-compose.ethereum.yml up
+# ./ethereum/scripts/create_docker_network
+```
+
+Then bring the network up:
+
+```
+# docker-compose up
 ```
 
 When it first starts up, it will take a minute or so for all the nodes to peer.
